@@ -1,0 +1,24 @@
+#!/bin/bash
+
+g++ ordenacion.cpp -o ordenacion
+
+./ordenacion $I >> ordenacionO0.dat
+
+g++ ordenacion.cpp -o ordenacion -O1
+
+./ordenacion $I >> ordenacionO1.dat
+
+g++ ordenacion.cpp -o ordenacion -O2
+
+./ordenacion $I >> ordenacionO2.dat
+
+g++ ordenacion.cpp -o ordenacion -O3
+
+./ordenacion $I >> ordenacionO3.dat
+
+
+g++ ocurrencias.cpp -o ocurrencias
+g++ frecuencias.cpp -o frecuencias
+
+./ocurrencias $I >> ocurrencias.dat
+./frecuencias $I >> frecuencias.dat
